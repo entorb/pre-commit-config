@@ -2,12 +2,13 @@
 Simple Python test script.
 
 for testing Ruff findings and solutions
-
-here is a customword for cspell
 """
 
 import datetime as dt
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+TZ_DE = ZoneInfo("Europe/Berlin")
 
 
 def calc_sum(x: int, y: float) -> float:
@@ -28,7 +29,8 @@ def calc_sum(x: int, y: float) -> float:
 
 def print_date() -> None:
     """Print the current date."""
-    print(dt.datetime.now(tz=dt.timezone.utc).date())
+    # DTZ011 do not use dt.date.today()
+    print(dt.datetime.now(tz=TZ_DE).date())
 
 
 def read_file(filename: Path) -> str:
