@@ -1,0 +1,8 @@
+# CSpell Custom Dictionary Words
+autoflake
+autoupdate
+isort
+Menke
+noqa
+pyupgrade
+Torben

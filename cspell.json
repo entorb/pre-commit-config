@@ -1,0 +1,20 @@
+{
+  "useGitignore": true,
+  "dictionaries": ["cspell-words"],
+  "dictionaryDefinitions": [
+    {
+      "name": "cspell-words",
+      "path": "cspell-words.txt",
+      "addWords": true
+    }
+  ],
+  "language": "en-US",
+  "ignorePaths": [
+    ".gitignore",
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    ".*",
+    "requirements.txt"
+  ]
+}

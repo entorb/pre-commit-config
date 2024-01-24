@@ -2,6 +2,8 @@
 Simple Python test script.
 
 for testing Ruff findings and solutions
+
+here is a customword for cspell
 """
 
 import datetime as dt
