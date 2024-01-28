@@ -8,7 +8,6 @@ dictionaryDefinitions:
     path: "./cspell-words.txt"
     addWords: true
 dictionaries:
-  - python
   - cspell-words
 ignorePaths:
   - ".*"
