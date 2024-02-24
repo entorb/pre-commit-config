@@ -23,6 +23,7 @@ def calc_sum(x: int, y: float) -> float:
     Returns:
     -------
         float: The sum of x and y.
+
     """
     return x + y
 
