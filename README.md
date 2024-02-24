@@ -36,7 +36,11 @@ To disable ruff checking of a (legacy) file or path, you can
 * exclude via [.pre-commit-config.yaml](.pre-commit-config.yaml)
 * exclude via .gitignore file
 
-To disable a certain rule for a specific line of code append a comment like
+To disable a certain rule for a file add
+
+`# ruff: noqa: D103`
+
+To disable a certain rule for a specific line of code:
 `# noqa: D103`
 
 ## configure cspell hook (spell checker)
