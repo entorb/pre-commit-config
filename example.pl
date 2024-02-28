@@ -1,3 +1,5 @@
+# Example Perl script
+
 use warnings;
 use strict;
 
