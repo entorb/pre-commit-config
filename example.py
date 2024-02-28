@@ -1,5 +1,5 @@
 """
-Simple Python test script.
+Example Python script.
 
 for testing Ruff findings and solutions
 """
