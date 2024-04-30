@@ -2,6 +2,8 @@ fix = true               # auto-fix findings
 line-length = 88         # same as Black
 target-version = "py312" # Python 3.12
 
+# extend-exclude = ["src/MyBadFile1.py"]
+
 [lint]
 # comment this out to use only default rules (["E4", "E7", "E9", "F"])
 select = ["ALL"] # activate all rules
