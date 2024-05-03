@@ -40,7 +40,6 @@ def read_file(filename: Path) -> str:
         return f.readline()
 
 
-# init main
 if __name__ == "__main__":
     print_date()
     print(calc_sum(1, 2.2))
