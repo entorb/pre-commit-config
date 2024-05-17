@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: false
@@ -31,9 +31,10 @@ jobs:
         uses: pre-commit/action@v3.0.1
 
       - name: Install dependencies
+        if: ${{ hashFiles('requirements.txt') != '' }}
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r requirements.txt
 
       - name: Install and run pytest
         run: |
