@@ -19,13 +19,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: "pip"
-
-      - name: Python cache set up
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.pythonLocation }}
-          key: ${{ env.pythonLocation }}-py-cache
+          # pre-commit has its own cache
+          # cache: "pip"
 
       - name: Install pre-commit
         run: |
@@ -34,6 +29,9 @@ jobs:
       - name: Run pre-commit autoupdate
         run: |
           pre-commit autoupdate
+
+      - name: Run pre-commit hooks
+        uses: pre-commit/action@v3.0.1
 
       - name: Commit changes if any
         run: |
