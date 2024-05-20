@@ -28,6 +28,7 @@ repos:
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-executables-have-shebangs
+      - id: check-illegal-windows-names
       - id: check-json
       - id: check-merge-conflict
       - id: check-shebang-scripts-are-executable
@@ -44,6 +45,7 @@ repos:
       # - id: double-quote-string-fixer
       - id: end-of-file-fixer
       - id: file-contents-sorter
+        files: ^(deploy-whitelist.txt|\.gitignore|\.dockerignore)$
       - id: fix-byte-order-marker
       - id: fix-encoding-pragma
         args: ["--remove"]
@@ -62,7 +64,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.4.4"
+    rev: "v0.5.1"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -90,14 +92,14 @@ repos:
   #     - id: mypy
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.40.0
+    rev: v0.41.0
     hooks:
       - id: markdownlint
         args: ["--disable", "MD013"]
 
   # code spell check via cspell
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.8.0
+    rev: v8.10.1
     hooks:
       - id: cspell
 
