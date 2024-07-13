@@ -12,19 +12,7 @@ TZ_DE = ZoneInfo("Europe/Berlin")
 
 
 def calc_sum(x: int, y: float) -> float:
-    """
-    Calculate the sum of an integer and a float.
-
-    Args:
-    ----
-        x (int): The integer to be added.
-        y (float): The float to be added.
-
-    Returns:
-    -------
-        float: The sum of x and y.
-
-    """
+    """Calculate the sum of an integer and a float."""
     return x + y
 
 
