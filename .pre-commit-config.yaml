@@ -28,6 +28,7 @@ repos:
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-executables-have-shebangs
+      - id: check-illegal-windows-names
       - id: check-json
       - id: check-merge-conflict
       - id: check-shebang-scripts-are-executable
@@ -44,6 +45,7 @@ repos:
       # - id: double-quote-string-fixer
       - id: end-of-file-fixer
       - id: file-contents-sorter
+        files: ^(deploy-whitelist.txt|\.gitignore|\.dockerignore)$
       - id: fix-byte-order-marker
       - id: fix-encoding-pragma
         args: ["--remove"]
