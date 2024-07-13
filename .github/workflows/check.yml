@@ -25,7 +25,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          # here no pip cache needed, since pre-commit has its own and no other packages installed
+          # here no pip cache needed, since no packages installed
+          # pre-commit has its cache
           # cache: "pip"
 
       - name: Install dependencies
