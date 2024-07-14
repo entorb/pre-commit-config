@@ -11,6 +11,7 @@ dictionaries:
   - cspell-words
 ignorePaths:
   - ".*"
+  - "cspell.config.yaml"
   - "dist"
   - "build"
   - "node_modules"
