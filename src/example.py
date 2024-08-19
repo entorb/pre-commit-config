@@ -2,7 +2,7 @@
 Example Python script.
 
 for testing Ruff findings and solutions
-"""  # noqa: INP001
+"""
 
 import datetime as dt
 from pathlib import Path
