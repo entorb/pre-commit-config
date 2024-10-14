@@ -81,12 +81,12 @@ repos:
         args: ["--skip", "B101,B404"]
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.20.0
+    rev: v8.20.1
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/trufflesecurity/truffleHog
-    rev: v3.82.6
+    rev: v3.82.8
     hooks:
       - id: trufflehog
 
@@ -121,7 +121,7 @@ repos:
 
   # code spell check via cspell
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.13.3
+    rev: v8.15.1
     hooks:
       - id: cspell
 
