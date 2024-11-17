@@ -6,3 +6,4 @@ Menke
 noqa
 pyupgrade
 Torben
+venv
