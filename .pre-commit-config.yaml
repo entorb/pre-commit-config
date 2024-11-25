@@ -67,7 +67,7 @@ repos:
 
   # ruff
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.7.3"
+    rev: "v0.8.0"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -86,7 +86,7 @@ repos:
       - id: gitleaks
 
   - repo: https://github.com/trufflesecurity/truffleHog
-    rev: v3.83.6
+    rev: v3.84.1
     hooks:
       - id: trufflehog
 
@@ -114,7 +114,7 @@ repos:
 
   # markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.42.0
+    rev: v0.43.0
     hooks:
       - id: markdownlint
         args: ["--disable", "MD013"]
