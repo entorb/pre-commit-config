@@ -67,7 +67,7 @@ repos:
 
   # ruff
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.8.2"
+    rev: "v0.8.3"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -86,7 +86,7 @@ repos:
       - id: gitleaks
 
   - repo: https://github.com/trufflesecurity/truffleHog
-    rev: v3.85.0
+    rev: v3.86.1
     hooks:
       - id: trufflehog
 
