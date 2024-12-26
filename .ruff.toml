@@ -28,6 +28,7 @@ extend-ignore = [
     "T201",   # print
     "TD002",  # missing-todo-author
     "TD003",  # missing-todo-link
+    "S101",   # use of asserts
 ]
 
 
