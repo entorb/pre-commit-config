@@ -10,9 +10,12 @@
 # ruff replaces flake8, pyupgrade, and autoflake
 # ruff-format replaces black, isort, add-trailing-comma
 
+default_language_version:
+  python: python3.12
+
 exclude: |
   (?x)^(
-    .*.vscode/launch.json |
+    \.vscode/.*|
   )$
 
 repos:
@@ -49,14 +52,12 @@ repos:
         args: ["--remove"]
       - id: forbid-new-submodules
       # - id: forbid-submodules
-      #   args: ['--fix=lf']
       - id: mixed-line-ending
         args: ["--fix=lf"]
       - id: name-tests-test
-        args: ["--pytest"]
+        args: ["--pytest-test-first"]
       # - id: no-commit-to-branch
       #   args: [--branch, staging]
-      # not, since it decodes utf-8
       - id: pretty-format-json
         args: ["--autofix", "--no-ensure-ascii", "--no-sort-keys"]
       - id: requirements-txt-fixer
@@ -66,7 +67,7 @@ repos:
 
   # ruff
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.11.5"
+    rev: "v0.11.6"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -105,6 +106,12 @@ repos:
       - id: rst-inline-touching-normal
       - id: text-unicode-replacement-char
 
+  # CRLF -> LF
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.5
+    hooks:
+      - id: remove-crlf
+
   # markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.44.0
@@ -114,7 +121,7 @@ repos:
 
   # code spell check via cspell
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.17.3
+    rev: v8.19.0
     hooks:
       - id: cspell
 
@@ -125,6 +132,3 @@ repos:
   #     # - id: perlcritic
   #     - id: perltidy
   #     # - id: perlimports
-
-default_language_version:
-  python: python3.12
