@@ -67,7 +67,7 @@ repos:
 
   # ruff
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.11.12"
+    rev: "v0.11.13"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -81,7 +81,7 @@ repos:
         args: ["--skip", "B101,B404"]
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.27.0
+    rev: v8.27.2
     hooks:
       - id: gitleaks
 
