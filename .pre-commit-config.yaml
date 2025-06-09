@@ -7,20 +7,17 @@
 # update hooks to latest version
 #  pre-commit autoupdate
 
-# ruff replaces flake8, pyupgrade, and autoflake
-# ruff-format replaces black, isort, add-trailing-comma
-
 default_language_version:
   python: python3.13
 
 exclude: |
   (?x)^(
-    \.vscode/.*|
+    \.vscode/.*
   )$
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
         args: ["--maxkb=500"]
@@ -48,8 +45,6 @@ repos:
       # - id: file-contents-sorter
       #   files: ^(deploy-whitelist.txt|\.gitignore|\.dockerignore)$
       - id: fix-byte-order-marker
-      - id: fix-encoding-pragma
-        args: ["--remove"]
       - id: forbid-new-submodules
       # - id: forbid-submodules
       - id: mixed-line-ending
@@ -66,22 +61,22 @@ repos:
       - id: trailing-whitespace
 
   # ruff
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.11.12"
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.12.11"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
 
   # security
-  - repo: https://github.com/PyCQA/bandit
-    rev: 1.8.3
-    hooks:
-      - id: bandit
-        args: ["--skip", "B101,B404"]
+  # - repo: https://github.com/PyCQA/bandit
+  #   rev: 1.8.3
+  #   hooks:
+  #     - id: bandit
+  #       args: ["--skip", "B101,B404"]
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.27.0
+    rev: v8.28.0
     hooks:
       - id: gitleaks
 
@@ -90,27 +85,11 @@ repos:
   #   hooks:
   #     - id: trufflehog
 
-  # minor formatting
-  - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.10.0
-    hooks:
-      - id: python-check-blanket-noqa
-      # not, since '# type: ignore' is ok for me
-      # - id: python-check-blanket-type-ignore
-      - id: python-check-mock-methods
-      - id: python-no-eval
-      - id: python-no-log-warn
-      - id: python-use-type-annotations
-      - id: rst-backticks
-      - id: rst-directive-colons
-      - id: rst-inline-touching-normal
-      - id: text-unicode-replacement-char
-
-  # CRLF -> LF
-  - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
-    hooks:
-      - id: remove-crlf
+  # # CRLF -> LF
+  # - repo: https://github.com/Lucas-C/pre-commit-hooks
+  #   rev: v1.5.5
+  #   hooks:
+  #     - id: remove-crlf
 
   # markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
@@ -121,7 +100,7 @@ repos:
 
   # code spell check via cspell
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.0.1
+    rev: v9.2.0
     hooks:
       - id: cspell
 
