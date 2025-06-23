@@ -1,6 +1,6 @@
 """Unit Tests for example.py."""
 
-# ruff: noqa: S101 D103 PLR2004 INP001
+# ruff: noqa: D103, PLR2004, INP001
 
 import sys
 from pathlib import Path
