@@ -64,7 +64,7 @@ repos:
 
   # ruff
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.12.2"
+    rev: "v0.12.3"
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -102,7 +102,7 @@ repos:
 
   # code spell check via cspell
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.0.1
+    rev: v9.1.0
     hooks:
       - id: cspell
 
