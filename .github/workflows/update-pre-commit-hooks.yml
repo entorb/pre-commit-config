@@ -2,7 +2,7 @@ name: Update Pre-commit Hooks Versions
 
 on:
   schedule:
-    - cron: "51 5 * * 1" # Every Monday morning
+    - cron: "51 5 1 * *" # monthly
   workflow_dispatch: # Manual trigger
 
 permissions:
