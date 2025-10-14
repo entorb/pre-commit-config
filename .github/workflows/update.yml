@@ -1,8 +1,8 @@
-name: Update Pre-commit Hooks Versions
+name: Update
 
 on:
   schedule:
-    - cron: "51 5 1 * *" # monthly
+    - cron: "51 5 12 * *" # At 05:51 on 12th day-of-month
   workflow_dispatch: # Manual trigger
 
 permissions:
@@ -38,6 +38,7 @@ jobs:
           if [[ $(git status --porcelain) ]]; then
             git config --local user.name "GitHub Action"
             git config --local user.email "action@github.com"
-            git commit -am "Update .pre-commit-config.yaml"
+            git add .pre-commit-config.yaml
+            git commit -m "Update .pre-commit-config.yaml" || true
             git push
           fi
