@@ -1,0 +1,11 @@
+# CSpell Custom Dictionary Words
+autoflake
+autoupdate
+DataFrame
+isort
+Menke
+noqa
+Pandas
+pyupgrade
+Torben
+venv
